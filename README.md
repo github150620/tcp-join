@@ -30,5 +30,5 @@ func main() {
 ```
 
 ## Futures
-* If either A or B close, then the other will be closed.
+* If either connection A or connection B close, then the other will be closed.
 * Connection idle time is 5 minutes.
