@@ -29,7 +29,7 @@ func (join *TCPJoin) Run() {
 	<-join.done
 }
 
-func (join *TCPCopy) readAndWriteServe(rc, wc net.Conn) {
+func (join *TCPJoin) readAndWriteServe(rc, wc net.Conn) {
 	defer func() {
 		join.done <- struct{}{}
 	}()
