@@ -21,8 +21,8 @@ func New(conn1, conn2 net.Conn) *TCPJoin {
 }
 
 func (join *TCPJoin) Run() {
-	go c.readAndWriteServe(join.conn1, join.conn2)
-	go c.readAndWriteServe(join.conn2, join.conn1)
+	go join.readAndWriteServe(join.conn1, join.conn2)
+	go join.readAndWriteServe(join.conn2, join.conn1)
 	<-join.done
 	join.conn1.Close()
 	join.conn2.Close()
