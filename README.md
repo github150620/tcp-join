@@ -24,7 +24,7 @@ func main() {
 		return
 	}
 
-	join = TCPJoin.New(conn1, conn2)
+	join = tcpjoin.New(conn1, conn2)
 	join.Run()
 }
 ```
